@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="hospital-overlay"></div> 
+
+  <img src="../assets/img/main hospital.jpeg" alt="#" class="hospital-image">
+  <span class="clinic-selection">
+    {{getTranslation('Chooseaclinicyoucantrust')}}
+  </span>
+  <span class="clinic-location">
+    {{getTranslation('location')}}
+  </span>
+  <div class="Maindoctors">
+    <div class="doctors">
+      <div *ngFor="let doctor of doctors" class="specificDoctor" (click)="getDoctor(doctor)"> 
+        <img [src]="doctor.pictureUrl" style="cursor: pointer" [alt]="doctor.name + ' ' + doctor.surname">
+        <h2>{{ doctor.name }} {{ doctor.surname }}</h2>
+        <p>{{ doctor.bio }}</p>
+  
+      </div>
+    </div>
+    
+    <div class="category">
+   <ng-container *ngFor="let doctorsArray of [uniqueDoctors, uniqueDoctors2]; let i = index">
+  <div>
+    <ul>
+      <li *ngFor="let doctor of doctorsArray">
+        ({{ doctor.count }}) {{ doctor.bio }}
+      </li>
+    </ul>
+  </div>
+</ng-container>
+
+    </div>
+    
+</div>

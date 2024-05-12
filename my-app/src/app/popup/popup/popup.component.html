@@ -1,0 +1,44 @@
+<div class="popup">
+    <span class="authorization-text"> {{getTranslation('authorization')}}</span>
+    <div class="authorization">
+        <form (submit)="login(email.value, password.value, verificationCode.value); ">
+            <input type="text" placeholder="{{getTranslation('email')}}" class="input-field" #email name="email">
+            <input type="password" placeholder="{{getTranslation('password')}}" class="input-field" #password name="password">
+            <input type="text" placeholder="{{getTranslation('authorisationcode')}}" class="input-field" #verificationCode name="verificationcode">
+            <button type="submit" class="login-button">{{getTranslation('login')}}</button>
+        </form>
+        
+        <button type="button" (click)="sendVerificationCode(email.value)" class="VerificationCode ">{{getTranslation('authorisationcodesend')}}</button>  
+        <button type="button" (click)="passwordRecovery()" class="forgot-password">{{getTranslation('passwordrecovery')}}</button>
+        <div *ngIf="errorMessage" class="error-message">
+            <p class="error-text">{{ errorMessage2 }}</p>
+        </div>
+        
+
+            <div *ngIf="showNewPasswordFields" class="password-change-form">
+
+                <form (submit)="changePassword(email.value, verificationCode.value, newPassword.value, repeatPassword.value)">
+                    <input type="text" placeholder="{{getTranslation('email')}}" class="input-field" #email name="email">
+                    <input type="text" placeholder="{{getTranslation('authorisationcode')}}" class="input-field" #verificationCode name="verificationcode">
+                    <input type="password" placeholder="{{getTranslation('password')}}" class="input-field" #newPassword name="password">
+                    <input type="password" placeholder="{{getTranslation('repeatpassword')}}"class="input-field" #repeatPassword name="password">
+                    <button type="submit" class="change-password" >{{getTranslation('changepassword')}}</button>
+                    
+                </form>
+
+                <div *ngIf="emailSent" class="success-message">
+                    <p>Activation email sent successfully!</p>
+                  </div>
+
+                  <div *ngIf="errorMessage" class="error-message">
+                    <p class="error-text">{{ errorMessage2 }}</p>
+                  </div>
+                <button type="button" (click)="sendVerificationCode(email.value)" class="VerificationCode">{{getTranslation('authorisationcode')}}</button>
+                <div *ngIf="errorMessage" class="error-message">
+                    <p class="error-text">{{ errorMessage }}</p>
+                </div>
+                
+            </div>
+            
+    </div>
+</div> 

@@ -1,0 +1,117 @@
+.popup {
+    width: 600px;
+    height: 450px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+}
+
+.authorization {
+    text-align: center;
+}
+.authorization-text {
+    width: 177px;
+    height: 31px;
+    font-family: FiraGO;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: block;
+    color: #18A4E1;
+  }
+
+.input-field {
+    width: 377px;
+    height: 48px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ECF2F8;
+}
+
+
+.password-change-form {
+    margin-top: 40px;
+    background-color: white;
+}
+
+
+
+.login-button,
+.VerificationCode{
+    width: auto; 
+    height: 40px;
+    border-radius: 40px;
+    background-color: #053354;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    right:100px;
+    
+    
+}
+.forgot-password {
+    width: auto; 
+    height: 40px;
+    border-radius: 40px;
+    background-color: #053354;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+   
+    left: 120px;
+}
+.change-password{
+    width: auto; 
+    height: 40px;
+    border-radius: 40px;
+    background-color: #053354;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover,
+.VerificationCode:hover,
+.forgot-password:hover {
+    background-color: #032241;
+}
+
+.forgot-password:hover {
+    background-color: #032241;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .errorMessage2{
+    color: red;
+  }

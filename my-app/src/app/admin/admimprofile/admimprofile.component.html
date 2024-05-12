@@ -1,0 +1,141 @@
+<div class="container">
+  <table class="my-table">
+    <thead>
+      <tr>
+        <th> {{getTranslation('name')}}</th>
+        <th>{{getTranslation('იმეილი')}}</th>
+        <th>{{getTranslation('picture')}}</th>
+        <th>{{getTranslation('raiting')}}</th>
+        <th> {{getTranslation('id')}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUsers">
+        <td >
+          <ng-container *ngIf="!user.editing; else editName">
+            {{ user.name }}
+          </ng-container>
+          <ng-template #editName>
+            <input type="text" [(ngModel)]="user.name" >
+        
+          </ng-template>
+        </td>
+        <td>
+          <ng-container *ngIf="!user.editing; else editEmail">
+            {{user.bio }}
+          </ng-container>
+          <ng-template #editEmail>
+            <input type="email" [(ngModel)]="user.email">
+          </ng-template>
+        </td>
+        
+        <td><img src="../../../assets/img/profile picture.jpg" class="user-picture" alt=""></td>
+        <td>{{ user.rating }}</td>
+        <td> {{user.personalID}}</td>
+        <td>
+          <i class="fa-solid fa-pencil" (click)="showEdit = true; toggleEdit(user)"></i>
+          <i class="fa-solid fa-trash" (click)="deleteAccount(user.personalID)"></i>
+
+
+        </td>
+      </tr>
+<!-- //// -->
+
+      <tr *ngFor="let doctor of allDoctors">
+        <td >
+          <ng-container *ngIf="!doctor.editing; else editName">
+            {{ doctor.name }}
+          </ng-container>
+          <ng-template #editName>
+            <input type="text" [(ngModel)]="doctor.name" >
+        
+          </ng-template>
+        </td>
+        <td>
+          <ng-container *ngIf="!doctor.editing; else editEmail">
+            {{ doctor.bio }}
+          </ng-container>
+          <ng-template #editEmail>
+            <input type="email" [(ngModel)]="doctor.email">
+          </ng-template>
+        </td>
+        
+        <td> <img src="{{doctor.pictureUrl}}" class="user-picture"></td>
+        <td>{{ doctor.rating }}</td>
+        <td>{{doctor.doctorID}}</td>
+        <td>
+          <i class="fa-solid fa-pencil" (click)="showEdit = true; toggleEdit(doctor)"></i>
+          <i class="fa-solid fa-trash"></i>
+        </td>
+      </tr> 
+    
+  </table>
+</div>
+
+
+<div *ngIf="showEdit" class="showEditOptions">
+  <button class="okay" (click)="updateUser()">{{getTranslation('okay')}} </button>
+  <button class="cancel" (click)="cancelEdit()">{{getTranslation('cancel')}}</button>
+</div>
+
+<div class="doctorRegistration">
+  <div class="registration">
+    <form class="registrationForm" [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">{{getTranslation('registration')}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="custom-background">{{getTranslation('name')}}</td>
+            <td class="custom-background">{{getTranslation('email')}}</td>
+            <td class="custom-background">{{getTranslation('id')}}</td>
+          </tr>
+          <tr>
+            <td >
+              <input formControlName="name" type="text" placeholder="{{getTranslation('Atleast5letters')}}" [(ngModel)]="newRegister.name" required>
+            </td>
+            <td>
+              <input formControlName="email" type="email" placeholder="{{getTranslation('email')}}" [(ngModel)]="newRegister.email" required>
+            </td>
+            <td>
+              <input formControlName="PersonalID" class="PersonalID" type="text" placeholder="{{getTranslation('id')}}" [(ngModel)]="newRegister.PersonalID">
+            </td>
+          </tr>
+          <tr>
+            <td class="custom-background">"{{getTranslation('Atleast5letters')}}"</td>
+            <td class="custom-background">{{getTranslation('password')}}</td>
+            <td class="custom-background">{{getTranslation('category')}}</td>
+          </tr>
+          <tr>
+            <td>
+              <input formControlName="surname" type="text" placeholder="{{getTranslation('surname')}}"  [(ngModel)]="newRegister.surname">
+            </td>
+            <td>
+              <input formControlName="password" type="password" placeholder="{{getTranslation('Atleast7letters')}}"  [(ngModel)]="newRegister.password">
+            </td>
+            <td>
+              <input formControlName="bio" type="text" placeholder="{{getTranslation('Anesthesiologisttherapist')}}"  [(ngModel)]="newRegister.bio">
+            </td>
+          </tr>
+          <tr>
+            <td class="custom-background">{{getTranslation('photo')}}</td>
+            <td class="custom-background">{{getTranslation('cv')}}</td>
+          </tr>
+          <tr>
+            <td >
+              <input   type="file" (change)="onPhotoSelected($event)" accept="image/*">
+            </td>
+            <td>
+              <input type="file" (change)="onCvSelected($event)" accept=".pdf,.doc,.docx">
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <button type="submit" class="registerButton">{{getTranslation('registration')}}</button>
+    </form>
+  </div>
+</div>

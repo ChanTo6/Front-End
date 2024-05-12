@@ -1,0 +1,104 @@
+<div class="main">
+  <div class="header2">
+
+  <div class="header">
+    <div class="icon">
+      <a  style="cursor: pointer;">
+        <img src="../assets/img/icon.png" alt="Clinic Icon">
+      </a>
+      <button class="clinic-title" (click)="goToMain()">{{getTranslation('clinic')}}</button>
+    </div>
+    <div class="navigation">
+      <a href="#">{{getTranslation('clinics')}}</a>
+      <a href="#">{{getTranslation('annotations')}}</a>
+      <a href="#">{{getTranslation('actions')}}</a>
+      <a href="#">{{getTranslation('services')}}</a>
+      <a href="#">{{getTranslation('medicines')}}</a>
+      <a href="#">{{getTranslation('contact')}}</a>
+
+      <span *ngIf="handleLoginStatus()" class="authorisation/registration">
+        <button class="authorisation" (click)="toggleAuthorizationPopup()">{{getTranslation('authorization')}}/</button>
+        <button class="registration" (click)="showRegisterComponent()">{{getTranslation('registration')}}</button>
+        
+      </span>
+      
+      <button class="registration" *ngIf="!handleLoginStatus()" (click)="logout()">{{getTranslation('logout')}}</button>
+      <button class="profile" [ngClass]="{'admin-panel': isAdmin(), 'doctor-panel': isDoctor()}" (click)="goToUserProfile()" *ngIf="!handleLoginStatus()"> {{ getPanelText() }}</button>
+      
+      <img src="../assets/img/profile picture.jpg" alt="Profile Picture" class="profile-picture" *ngIf="!handleLoginStatus()">
+      <button class="language-button" (click)="changeLanguage('en')">English</button>
+      <button class="language-button" (click)="changeLanguage('ka')">Georgian</button>
+    </div>
+  </div>
+   <div class="searchBar">
+    <div class="location">
+      <i class="fa-solid fa-phone"> 032 2 100 100</i>
+      <i class="fa-solid fa-location-dot"> {{getTranslation('location')}}</i>
+    </div>
+      <input class="searchInput" type="text" placeholder="{{getTranslation('searchDoctorByName')}}">
+      <input class="searchInput" type="text" placeholder="{{getTranslation('Searchbyspecialty')}}">
+      <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div> 
+
+
+</div>
+  <div class="overlay" (click)="toggleAuthorizationPopup()" *ngIf="popup"></div>
+  <app-popup class="popup" *ngIf="popup">
+  </app-popup>
+
+  <div>
+    <div class="body">
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+  <div class="footer">
+    <span class="icon2">
+      <img src="../assets/img/icon.png">
+      <span class="clinic-title2">{{getTranslation('clinic')}}</span>
+    </span>
+    <table class="table2">
+      <tbody>
+        <tr>
+          <td>{{getTranslation('information')}}</td>
+          <td>{{getTranslation('forPatients')}}</td>
+          <td>{{getTranslation('contactUs')}}</td>
+          <td>{{getTranslation('followUs')}}</td>
+        </tr>
+        <tr>
+          <td>{{getTranslation('aboutus')}}</td>
+          <td>{{getTranslation('doctors')}}</td>
+          <td>{{getTranslation('Businessdays')}}</td>
+          <td>facebook</td>
+        </tr>
+        <tr>
+        <td>{{getTranslation('Partner')}}</td>
+        <td>{{getTranslation('clinics')}}</td>
+        <td> ბლოგი</td>
+        <td>Instagram</td>
+      </tr>
+      <tr>
+      <td>{{getTranslation('forDoctors')}}</td>
+      <td>{{getTranslation('Anotation')}}</td>
+      <td>{{getTranslation('workingTime')}}</td>
+      <td>Youtube</td>
+    </tr>
+    <tr>
+      <td>{{getTranslation('forclinicks')}}</td>
+      <td>{{getTranslation('blog')}}</td>
+      <td>{{getTranslation('location')}}</td>
+    </tr>
+    <tr>
+      <td>{{getTranslation('forpharmacies')}}</td>
+      <td>{{getTranslation('media')}}</td>
+      <td>032 2 100 100</td>
+    </tr>
+      </tbody>
+    </table>
+  </div> 
+</div>
+
+
+
+
+<h1>{{ getTranslation('clinic') }}</h1>

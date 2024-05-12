@@ -1,0 +1,278 @@
+.main {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    flex-grow: 1;
+    width: 1920px;
+    position: absolute;
+    z-index: 2000;
+    background-color: white;
+  }
+  a{
+    text-decoration: none;
+    margin-left: 30px;
+  }
+  img
+  {
+    height: 66px;
+  }
+  .clinic-title{
+    color: red;
+    border: none;
+    background-color: white;
+  }
+  .header {
+    height: 66px;
+    width: 1621px;
+    top: 17px;
+    left: 150px;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header2 {
+    position: absolute; 
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    z-index: 100; 
+}
+  ul{
+    margin: center;
+  }
+  .icon{
+    width: 90px;
+    height: 66px;
+    top: 17px; 
+    display: flex;
+    margin-right: 140px;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .navigation a:not(:first-child) {
+    margin-right: 10px;
+  }
+  .navigation a {
+    position: relative;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    text-decoration: none;
+    color:  #053354;
+    
+  }
+  .navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: width 0.3s ease-in-out;
+  }
+  .navigation a:hover::after {
+    width: 100%;
+  }
+  .searchBar {
+    margin-top: 10px; 
+    background-color:  rgba(236, 242, 248, 1);
+    ;
+    width: 1920px;
+    height: 120px;
+    top: 110px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute; 
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .authorisation{
+    background-color: rgba(240, 250, 255, 1);
+;
+      border:none;
+      margin-left: 40px;
+      color:#18A4E1;
+  }
+
+  .registration{
+    background-color: rgba(240, 250, 255, 1);
+    border: none;
+    margin-left: 0;
+    color:#053354;
+    
+}
+i{
+  margin-right: 40px;
+}
+.fa-solid.fa-phone {
+  width: 122px;
+height: 22px;
+top: 156px;
+left: 210px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+
+.fa-solid.fa-location-dot {
+  width: 240px;
+  height: 40px;
+  top: 147px;
+  left: 372px;
+  margin-top: 20px;
+  
+}
+.location{
+  display: flex;
+  justify-content: center;
+    align-items: center; 
+
+}
+
+.searchInput {
+  width: 480px;
+  height: 50px;
+  top: 125px;
+  left: 720px;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin-left: 50px;
+  vertical-align: middle;
+  
+}
+
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  left: 1740px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  background-color: #053354;
+  
+}
+.searchButton i {
+  font-size: 24px;
+  color: #FFFFFF;
+
+}
+
+
+.fa-magnifying-glass {
+  font-size: 20px;
+}
+
+.footer {
+  position: absolute; 
+  border: 2px solid blue;
+  background-color: #053354;
+  width: 1920px;
+  padding: 20px;
+  display: flex; 
+  top: 1848px;
+  justify-content: space-between; 
+
+}
+.body{
+  height: 1500px;
+  width: 1920px;
+}
+
+.table2 {
+  width: 70%; 
+  background-color: #053354;
+  border-collapse: collapse; 
+}
+
+.table2 td {
+  border: none; 
+  border-bottom: none;
+  padding: 10px;
+  background-color: #053354;
+  color: white;
+}
+
+.table2 tr:first-child td {
+  border-bottom: 1px solid black; 
+}
+
+.icon2 {
+  color: white; 
+  margin-left: 100px;
+  margin-top: 70px;
+}
+
+.icon2 img {
+  filter: brightness(0) invert(1);
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 51, 84, 0.7);
+
+  z-index: 999; 
+}
+
+
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.profile{
+  margin-left: 50px;
+  font-family: FiraGO;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.2px;
+text-align: left;
+border: none;
+background-color: white;
+color: rgba(24, 164, 225, 1);
+
+}
+.language-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+  margin-left: 50px;
+}
+
+.language-button:hover {
+  background-color: #45a049;
+}
+
+.language-button:active {
+  background-color: #3e8e41;
+}
+
+.language-button + .language-button {
+  margin-left: 10px;
+}
+

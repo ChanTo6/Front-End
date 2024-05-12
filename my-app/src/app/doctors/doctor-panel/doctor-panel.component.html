@@ -1,0 +1,75 @@
+<div class="category">
+  <ng-container *ngFor="let doctorsArray of [uniqueDoctors, uniqueDoctors2]; let i = index">
+    <div>
+      <ul>
+        <li *ngFor="let doctor of doctorsArray">
+          ({{ doctor.count }}) {{ doctor.bio }}
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+</div>
+<div class="userProfile">
+  <div class="doctor">
+    <img [src]="user?.pictureUrl" class="custom-img"> 
+  </div>
+    <h2>{{user?.name}} {{user?.surname}}</h2>
+    {{getTranslation('doctor')}}
+    {{user?.bio}} 
+<br>
+<br>
+
+    <div class="one">
+        <p>{{getTranslation('id')}}</p>
+        {{ user?.doctorID }}
+    </div>
+    <br>
+    <div class="two">
+        <p>{{getTranslation('email')}}</p>
+        {{ user?.email }}
+    </div>
+
+    <button class="changepassword">{{getTranslation('changepassword')}} </button>
+
+    <div class="three">
+      {{getTranslation('mybooking')}}:
+    </div>
+  
+</div>
+
+
+<div class="reservation">
+
+  <div class="schedule-table">
+    <div class="week-navigation">
+      <span class="number">2023</span>
+      <button (click)="previousWeek()" class="shecvla"> < </button>
+      <span class="mainmonth"> <span class="month">{{ month }}</span> </span>
+      <button (click)="nextWeek()"  class="shecvla"> > </button>
+    </div>
+  
+    <button (click)="sendDataToApi()">Send Data</button>
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th *ngFor="let day of currentWeek">{{ daysOfWeek[day.getDay()] }}<br>{{ day.getDate() }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hour of hours">
+          <td>{{ hour }}</td>
+          <td *ngFor="let day of currentWeek"
+    (click)="onCellClick(hour, day)"
+    [class.selected]="isCellSelected(hour, day)">
+  </td>
+
+              
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+

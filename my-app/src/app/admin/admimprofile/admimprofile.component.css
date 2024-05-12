@@ -1,0 +1,178 @@
+.container{
+    width: 1460px;
+height: 644px;
+top: 290px;
+left: 246px;
+gap: 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+position: absolute;
+overflow-y: auto; 
+}
+.doctorRegistration{
+    width: 1320px;
+    height: 350px;
+    top: 1050px;
+    left: 246px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+.showEditOptions{
+  position: absolute;
+  top :950px;
+  width: 300px;
+  right: 400px;
+}
+.category{
+    width: 174px;
+height: 31px;
+top: 290px;
+left: 150px;
+gap: 0px;
+opacity: 0px;
+font-family: FiraGO;
+font-size: 26px;
+font-weight: 500;
+line-height: 31.2px;
+text-align: left;
+color: rgba(24, 164, 225, 1);
+}
+
+.showEditOptions button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.showEditOptions button:focus {
+  outline: none;
+}
+
+.showEditOptions button:hover {
+  background-color: #f0f0f0; 
+}
+
+.showEditOptions button.okay {
+  background-color: #28a745; 
+  color: #fff;
+}
+
+.showEditOptions button.cancel {
+  background-color: #dc3545; 
+  color: #fff;
+}
+
+
+.doctor-img{
+    width: 38px;
+height: 38px;
+top: 422px;
+left: 839px;
+gap: 0px;
+opacity: 0px;
+}
+.user-picture{
+    width: 38px;
+    height: 38px;
+    top: 422px;
+    left: 839px;
+    gap: 0px;
+    opacity: 0px;
+}
+.my-table {
+    border-collapse: collapse;
+    border-spacing: 20px; 
+    background-color: rgba(236, 242, 248, 1);
+ 
+  }
+  .table{
+    background-color: rgba(236, 242, 248, 1);
+  }
+  .my-table th,
+.my-table td {
+  width: 20%; 
+  padding: 10px; 
+  
+}
+.my-table td{
+  width: 300px;
+  
+}
+  .registration{
+    width: 1300px;
+    height: 504px;
+    border-radius:50px;
+    position: absolute;
+    background-color: rgba(236, 242, 248, 1);
+}
+.registrationForm {
+    margin-top: 20px;
+    background-color: rgba(236, 242, 248, 1);
+  }
+  
+  .registerButton {
+    position:relative;
+    bottom: 10px;
+    left: 1100px; 
+    background-color:#053354;
+    border-radius: 50px;
+    color: white;
+    width: 180px;
+    height: 50px;
+  }
+  .activeCodeButton
+  {
+    background-color: red;
+  }
+  th {
+    color: #18A4E1;
+    font-family: 'FiraGO', sans-serif; 
+    font-weight: 500; 
+    font-size: 26px;
+    line-height: 31.2px; 
+    background-color: rgba(236, 242, 248, 1);
+  }
+  input{
+    width: 250px;
+    height: 50px;
+    top: 376px;
+    left: 150px;
+    gap: 0px;
+    border-radius: 50px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #ECF2F8;
+    
+  }
+
+  .custom-background{
+    background-color: rgba(236, 242, 248, 1);
+  }
+
+  .PersonalID{
+    width: 300px; 
+    height: 50px;
+    top: 376px;
+    left: 150px;
+    gap: 0px;
+    border-radius: 50px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #ECF2F8;
+  }
+
+  .fa-solid.fa-pencil {
+    background-color:  rgba(218, 250, 238, 1);
+    width: 20px; 
+    height: 20px;
+}
+
+.showButtons{
+  width: 1500px;
+  height: 1500px;
+}

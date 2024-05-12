@@ -1,0 +1,78 @@
+<div class="registration">
+  <form class="registrationForm" [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">{{getTranslation('registration')}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{getTranslation('name')}}</td>
+          <td>{{getTranslation('email')}}</td>
+          <td>{{getTranslation('id')}}</td>
+        </tr>
+        <tr>
+          <td>
+            <input formControlName="name" type="text" placeholder="{{getTranslation('Atleast5letters')}}">
+<div *ngIf="registrationForm.get('name')!.invalid && (registrationForm.get('name')!.dirty || registrationForm.get('name')!.touched)">
+  <div *ngIf="registrationForm.get('name')!.errors?.['required']"  class="error-message">
+    {{getTranslation('nameisrequired')}}
+  </div>
+  <div *ngIf="registrationForm.get('name')!.errors?.['minlength']"  class="error-message">
+    {{getTranslation('thenamemustcontainatleast5letters')}}
+  </div>
+</div>
+          </td>
+         <td>
+  <input formControlName="email" type="email" placeholder="{{getTranslation('email')}}">
+  <div *ngIf="registrationForm.get('email')!.invalid && (registrationForm.get('email')!.dirty || registrationForm.get('email')!.touched)" class="error-messages">
+    <div *ngIf="registrationForm.get('email')!.errors?.['required']" class="error-message">
+      {{getTranslation('emailisrequired')}}
+    </div>
+    <div *ngIf="registrationForm.get('email')!.errors?.['email']" class="error-message">
+      {{getTranslation('emailformatisinvalid')}}
+    </div>
+  </div>
+</td>
+<td>
+  <input formControlName="PersonalID" type="text" placeholder="{{getTranslation('id')}}">
+<div *ngIf="registrationForm.get('PersonalID')!.invalid && (registrationForm.get('PersonalID')!.dirty || registrationForm.get('PersonalID')!.touched)" class="error-messages">
+  <div *ngIf="registrationForm.get('PersonalID')!.errors?.['required']" class="error-message">
+    {{getTranslation('personalnumberisrequired')}}
+  </div>
+  <div *ngIf="registrationForm.get('PersonalID')!.errors?.['pattern']" class="error-message">
+    {{getTranslation('thepersonalnumbermustbeonlynumbers')}}
+  </div>
+</div>
+
+</td>
+</tr>
+<tr>
+  <td> {{getTranslation('surname')}}</td>
+  <td> {{getTranslation('password')}}</td>
+</tr>
+<tr>
+  <td>
+    <input formControlName="surname" type="text" placeholder="{{getTranslation('surname')}}">
+  </td>
+  <td>
+    <input formControlName="password" type="password" placeholder="{{getTranslation('atleast8characters')}}">
+    <div *ngIf="registrationForm.get('password')!.invalid && (registrationForm.get('password')!.dirty || registrationForm.get('password')!.touched)" class="error-messages">
+      <div *ngIf="registrationForm.get('password')!.errors?.['required']" class="error-message">
+        {{getTranslation('passwordisrequired')}}
+      </div>
+      <div *ngIf="registrationForm.get('password')!.errors?.['invalidPassword']" class="error-message">
+        {{getTranslation('passwordmustcontainatleast8haracters')}}
+      </div>
+    </div>
+  </td>
+</tr>
+</tbody>
+</table>
+<button type="submit" class="registerButton">{{getTranslation('registration')}}</button>
+</form>
+<div *ngIf="message" class="message-container">
+  <p>{{ message }}</p>
+</div>
+</div>

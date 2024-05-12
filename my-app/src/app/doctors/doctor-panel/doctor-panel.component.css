@@ -1,0 +1,181 @@
+.selected   {
+  background-color: green;
+}
+.category {
+    width: 350px;
+    height: 800px;
+    top:271px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+    left: 150px;
+    background:rgba(236, 242, 248, 1)
+  }
+  
+  .userProfile
+  {
+    background: rgba(236, 242, 248, 1);
+
+    width: 366px;
+height: 800px;
+top: 271px;
+left: 542px;
+gap: 0px;
+border-radius: 10px 0px 0px 0px;
+    opacity: 1; 
+position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  }
+
+  
+  img {
+    
+    width: 157px;
+    height: 157px;
+    opacity: 1; 
+
+  }
+  
+
+  img{
+    width: 157px;
+height: 157px;
+top: 316px;
+left: 646px;
+gap: 0px;
+opacity: 0px;display: flex;
+display: flex;
+justify-content: center;
+align-items: center;
+  }  
+  .reservation{
+    width: 830.5px;
+height: 839px;
+top: 271px;
+left: 940px;
+gap: 0px;
+opacity: 0px;
+position: absolute;
+
+  }
+.one{
+  width: 155px;
+height: 48px;
+top: 550px;
+left: 654px;
+gap: 0px;
+opacity: 0px;
+font-family: FiraGO;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.6px;
+text-align: center;
+}
+.two{
+  width: 224px;
+height: 48px;
+top: 633px;
+left: 614px;
+gap: 0px;
+opacity: 0px;
+font-family: FiraGO;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.6px;
+text-align: center;
+
+
+}
+.changepassword{
+  width: 160px;
+height: 22px;
+top: 717px;
+left: 646px;
+gap: 0px;
+opacity: 0px;
+font-family: FiraGO;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.6px;
+text-align: center;
+margin-top: 20px;
+}
+.three
+{
+  width: 124px;
+height: 48px;
+top: 774px;
+left: 662px;
+gap: 0px;
+opacity: 0px;
+font-family: FiraGO;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.6px;
+text-align: center;
+margin-top: 20px;
+
+}
+h2{
+  font-family: FiraGO;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.6px;
+text-align: left;
+
+ color:  rgba(24, 164, 225, 1);
+
+}
+.schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.schedule-table th, .schedule-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.schedule-table th {
+  background-color: #f2f2f2;
+}
+.custom-img {
+  width: 157px;
+  height: 157px;
+  top: 316px;
+  left: 646px;
+  border-radius: 50%;
+}
+.doctor{
+background-color: white;
+}
+
+.month{
+  width: 140px;
+height: 35px;
+top: 288px;
+left: 1115px;
+gap: 0px;
+border-radius: 50px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+color: rgba(24, 164, 225, 1);
+;
+
+font-size: 40px;
+}
+
+.number{
+  font-size: 40px;
+}
+.shecvla{
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  margin: 10px;
+}
